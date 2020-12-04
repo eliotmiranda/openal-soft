@@ -254,7 +254,7 @@ int main(int argc, char *argv[])
         else if(i+1 < argc && (strcmp(argv[i], "--gain") == 0 || strcmp(argv[i], "-g") == 0))
         {
             i++;
-            gain = atof(argv[i]);
+            gain = (float)atof(argv[i]);
             if (gain < 0.0f || gain > 1.0f)
             {
                 fprintf(stderr, "Invalid gain: %s (min: 0.0, max 1.0)\n", argv[i]);
